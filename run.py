@@ -2,7 +2,7 @@ import compiler
 
 while True:
     text = input('basic > ')
-    result, error = compiler.execute('<stdin>', text)
+    result, error = compiler.run('<stdin>', text)
 
-    if error: print(error.display_error())
+    if error: print(error.as_string())
     else: print(result)
